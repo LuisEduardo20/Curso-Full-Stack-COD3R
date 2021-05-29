@@ -20,6 +20,6 @@ teste();
 */
 
 // Com o let o mesmo não ocorre
-console.log('b =', b);
+//console.log('b =', b); -> Aqui apresenta erro
 let b = 2;
 console.log('b =', b);

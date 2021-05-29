@@ -14,7 +14,7 @@ console.log(b.nome);
 
 // Cópia por valor (Tipos primitivos)
 const c = 3;
-const d = c;
+let d = c;
 
 d++;
 

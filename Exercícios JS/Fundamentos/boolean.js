@@ -5,11 +5,13 @@ isAtivo = true;
 console.log(isAtivo);
 
 isAtivo = 1;
+// Negando a negação
 console.log(!!isAtivo);   // true
 
 console.log("Os verdadeiros...");
 console.log(!!3);
 console.log(!!-1);
+// Contém um elemento que é uma posição sem caractere
 console.log(!!' ');
 console.log(!!'texto');
 console.log(!![]);

@@ -17,7 +17,7 @@ function  teste2(num) {
 teste2(6);
 teste2(8);
 
-NUmber.prototype.retornaNum = function(inicio, fim) {
+Number.prototype.retornaNum = function(inicio, fim) {
   return this >= inicio && this <= fim;
 }
 
