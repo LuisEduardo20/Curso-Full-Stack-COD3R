@@ -1,10 +1,15 @@
 // Criando meu próprio forEach
+Array.prototype.forEach2 = function(callback) {
 
-Array.prototype.forEach2 = function(array = this, indice = 0) {
-  console.log(array)
-  console.log(indice)
+  for(let i = 0 ; i < this.length ; i++) {
+    callback(this[i], i, this)
+  }
+
 }
 
 const aprovados = ['Agatha', 'Aldo', 'Daniel', 'Raquel']
 
-aprovados.forEach2()
+aprovados.forEach2(function(nome, indice, array) {
+  console.log(`${indice + 1}) ${nome}`)
+  console.log(array);
+})
