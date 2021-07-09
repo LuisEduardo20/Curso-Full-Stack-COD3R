@@ -1,5 +1,5 @@
 // A função map() mapeia um array e tem como parâmetro uma função de callback
-// que faz uma ação para cada elemento do array original e returna um novo array com seus valores transformados
+// que faz uma ação para cada elemento do array original e retorna um novo array com seus valores transformados
 const nums = [1, 2, 3, 4, 5]
 
 // For com propósito

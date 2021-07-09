@@ -6,5 +6,8 @@ strings. A função deverá filtrar as palavras do array que contêm nelas a str
 */
 
 function buscarPalavrasSemelhantes(word, array) {
-  
+    return array.filter( array => array.includes(word));
 }
+
+// buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]);
+console.log(buscarPalavrasSemelhantes("pro", ["programação", "mobile", "profissional"]));

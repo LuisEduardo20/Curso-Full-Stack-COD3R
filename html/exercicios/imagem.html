@@ -29,53 +29,76 @@
 </div>
 
 <script>
-    
-    console.log(document.querySelector('[wm-slider] > *'));
-    // setInterval( () => {
-    //     document.querySelectorAll)('p').forEach( (el, i) => {
+
+    function mover(elem, inicio, fim, passo, callback) {
+        const novoInicio = inicio - passo;
+        if(novoInicio >= fim) {
+            elem.style.left = novoInicio + 'px';
+            setTimeout( () => mover(elem, novoInicio, fim, passo, callback), 7);
+        }
+        else {
+            callback();
+        }
+    }
+
+    const p = document.querySelector('[wm-slider] > p');
+    p.style.display = 'block';
+    mover(p, 2100, -520, 5, () => {
+        console.log('Terminou!!!');
+    })
+
+    function slider() {
+        const elementos = document.querySelectorAll('[wm-slider] > p');
+        const slides = Array.from(elementos);
+        exibirSlides(slides, slides[0])
+    }
+
+    // TESTAR DEPOIS
+    // document.querySelectorAll('p').forEach( (el, i) => {
+    //     console.log(el)
+    //     setTimeout( () => {
     //         let img = el.nextElementSibling;
     //         el.style = `display: block;`;
     //         img.animate([
-    //             { transform: 'translateX(0px)' },
-    //             { transform: 'translateX(500px)' }
-    //         ],
-    //         {duration: 8000})
+    //          { transform: 'translateX(0px)' },
+    //          { transform: 'translateX(500px)' }
+    //          ],
+    //          {duration: 8000})
     //         setTimeout(() => {
-    //             img.style = `display: none;`
+    //            img.style = `display: none;`
     //         }, 8000);
-    //     })
-    // }, 1000)
-
-    
+    //     }, 2000);
+    // })
+        
 </script>
-
-<style>
     
-    p {
-        width: 700px;
-        position: absolute;
-        display: none;
-    }
-    
-    .circular {
-        width: 513px;
-        background-color: #444;
-    }
-    
-    .texto {
-        width: 400px;
-    }
-    
-    .texto img {
-        margin-right:10px;
-    }
-    
-    .cidade {
-        width: 513px;
-        height: 342px;
-        background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 200%;
-    }
-</style>
+    <style>
+        
+        p {
+            width: 700px;
+            position: absolute;
+            display: none;
+        }
+        
+        .circular {
+            width: 513px;
+            background-color: #444;
+        }
+        
+        .texto {
+            width: 400px;
+        }
+        
+        .texto img {
+            margin-right:10px;
+        }
+        
+        .cidade {
+            width: 513px;
+            height: 342px;
+            background-image: url('http://files.cod3r.com.br/curso-web/imagem4.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 200%;
+        }
+    </style>
