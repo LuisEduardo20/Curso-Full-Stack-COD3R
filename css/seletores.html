@@ -6,7 +6,94 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*
+        section > span:nth-of-type(2) <- Segundo elemento 'span' da 'section'
+        section > :nth-child(even) <- Dentro de uma 'section' pega todos os filhos pares
+        section > :nth-child(odd) <- Dentro de uma 'section' pega todos os filhos ímpares
+        span:nth-child(1) <- Primeiro filho de alguém e que seja uma tag 'span'
+        {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+
+        /*
+        propriedade (id, class, ou criada)
+
+        [feira] / [feira=casa] / [feira~=casa] / [feira*=sa] { <- Segunda opção para quando uma propriedade tiver aquele determinado valor
+            color: #ff0;                            Terceira opção pega possíveis elementos da propriedade
+            background-color: #f77;                 Quarta opção pega todos os elementos que tiverem o parâmetro dentro
+        }
+        */
+
+
+        /*
+        Irmãos gerais (podem estar mais afastados)
+
+        p ~ ol {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
+
+
+        /*
+        Irmãos adjacentes (próximos)
+        
+        p + ul {
+            color: #ff0;
+            background-color: #f77;
+        } */
+
+
+        /* Seletor para qualquer tag filha
+
+        #aninhado section {
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+
+
+        /* 
+        Seletor de tag filho
+
+        #aninhado > div {
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+
+
+        /*
+        Seletor de ID
+
+        #aprovados {
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+        
+
+        /* 
+        Seletor de Classe
+
+        .tag {
+            color: #ff0;
+            background-color: #f77;
+        } 
+        */
+
+
+        /* 
+        Seletor Universal
+
+        * {
+            color: #ff0;
+            background-color: #f77;
+        }
+        */
     </style>
 </head>
 
